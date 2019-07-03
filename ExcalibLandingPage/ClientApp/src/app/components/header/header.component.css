@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+.header {
+  text-align: center;
+}
+
+.logo {
+  margin: 0.3em 0.15em;
+  padding: 0;
+  display: -moz-inline-stack; /* ← Firefox 2 backwards compatibility */
+  display: inline-block;
+  vertical-align: top;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+p.second-line {
+  font-size: 2.12em;
+  font-family: "Montserrat", Thin;
+  color: white;
+}
+
+span {
+  font-family: "Montserrat", Regular;
+  font-size: 5em;
+
+  letter-spacing: 0;
+  display: block;
+  margin: 0 auto;
+  text-shadow: 0 0 80px white;
+  /* logo animation переделать на желтый цвет*/
+  background: url(http://f.cl.ly/items/010q3E1u3p2Q0j1L1S1o/animated_text_fill.png)
+    repeat-y;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  /* Animate Background Image */
+
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: aitf 80s linear infinite;
+
+  /* Activate hardware acceleration for smoother animations */
+
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+}
+
+/* Animate Background Image */
+
+@-webkit-keyframes aitf {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* end logo animation */
